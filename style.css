@@ -4,6 +4,9 @@
     padding: 0;
     font-weight: normal;
     font-style: normal;
+    font-family: "Playfair", serif;
+    font-style: normal;
+    font-size: 18px;
 }
 
 :root{
@@ -26,6 +29,7 @@ a{
     margin: 0;
     gap: 50px;
 }
+
 .logo{
     width: 64px;
     height: 64px;
@@ -60,9 +64,78 @@ a{
     gap: 26%;
 }
 
+.lado{
+    margin-left: 10vh;
+    margin-top: 10vh;
+    font-size: 59px;
+}
+
+.img-main{
+    margin-left: 43%;
+    margin-top: -45vh;
+}
+
+.font-lado{
+    font-size: 59px;
+    font-weight: 500;
+}
+
+.font-texto{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+
 .linha-info{
     background-color: #23C75F;
     display: flex;
-    width: 2.74px;
+    width: 2.34px;
     height: 87.63px;
+    margin-left: -2vh;
+    position: relative;
+    top: 10vh;
+}
+
+.container-copy{
+    width: 1904.62px;
+    height: 302.56px;
+    margin-top: 10vh;
+    background-color: #1E1E1E;
+}
+
+.transparente{
+    background-color: transparent;
+    border: transparent;
+    display: inline-block;
+    margin-left: 2vh;
+    height: 40px;
+    width: 100vh;
+    font-family: "Playfair", serif;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.fonte{
+    font-weight: 500;
+}
+
+h2{
+    font-size: 27px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.botao-entrar{
+    background-color: #C72323;
+    width:100px;
+    text-align: center;
+    height:36px;
+    border-radius: 5px;
+}
+
+.botao-entrar:hover{
+    background-color: transparent;
+
 }
