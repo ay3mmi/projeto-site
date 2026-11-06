@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Playfair", serif;
+    font-style: normal;
+    font-size: 18px;
+}
+
+
+.img-logo{
+
+    width: 204px;
+    height: 204px;
+    position: relative;
+    margin-left: 42%;
+    margin-top: 10vh;
+}
+
+.container-copy{
+    width: 1904.62px;
+    height: 302.56px;
+    margin-top: 35.9vh;
+    background-color: #1E1E1E;
+}
+
+.login-forms{
+    display: grid;
+    grid-template-columns: repeat(1,22vh);
+    gap: 7px;
+    
+}
+
+.container-forms{
+    border: 1px green solid;
+    width: 600px;
+    border-radius: 6px;
+    height: 640px;
+    position: relative;
+    margin-left: 33%;
+}

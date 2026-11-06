@@ -106,13 +106,14 @@ a{
 .transparente{
     background-color: transparent;
     border: transparent;
+    border-color: transparent;
     display: inline-block;
     margin-left: 2vh;
     height: 40px;
     width: 100vh;
     font-family: "Playfair", serif;
-  font-style: normal;
-  font-size: 16px;
+    font-style: normal;
+    font-size: 16px;
 }
 
 .fonte{
@@ -133,9 +134,13 @@ p{
     text-align: center;
     height:36px;
     border-radius: 5px;
+    border: 1px solid;
+    border-color: #1E1E1E;
 }
 
 .botao-entrar:hover{
+    transition: 0.5s;
     background-color: transparent;
-
+    border: 1px solid;
+    border-color: #C72323;
 }
