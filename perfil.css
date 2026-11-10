@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Playfair", serif;
+    font-style: normal;
+    font-size: 18px;
+}
+
+:root{
+    --cor-fonte: black;
+    --cor-busca: #E6E6E6;
+}
+
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-fonte);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 0;
+    gap: 50px;
+    position: fixed;
+    background-color: white;
+    z-index: 10000;
+}
+
+.logo{
+    width: 64px;
+    height: 64px;
+}
+
+#move{
+    text-align: center;
+    background-color:var(--cor-busca);
+    height: 40px;
+    width: 100vh;
+    border-radius: 100px;
+    color: #383838;
+    display: flex;
+}
+
+.font-buscar{
+    margin-top: 1vh;
+    margin-left: 2vh;
+}
+
+.linha{
+    display: flex;
+    margin-left: 2vh;
+    margin-top: -0.5vh;
+    width: 1770px;
+    height: 3px;
+}
+
+.transparente{
+    background-color: transparent;
+    border: transparent;
+    border-color: transparent;
+    display: inline-block;
+    margin-left: 2vh;
+    height: 40px;
+    width: 100vh;
+    font-family: "Playfair", serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.carrinho{
+    background-color: #C72323;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.carrinho span{
+    padding: 0 7px;
+    margin-left:6px;
+}
+
+.botao-entrar{
+    background-color: #C72323;
+    width:100px;
+    text-align: center;
+    height:36px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #1E1E1E;
+    cursor: pointer;
+}
+
+.botao-entrar:hover{
+    transition: 0.5s;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: #C72323;
+}
+
+.container-perfil{
+    display: flex;
+    margin-top: 30vh;
+    margin-left: 42%;
+}
+
+.nome{
+    font-size: 59px;
+    font-weight: 600;
+}
+
+.email{
+    margin-top: 10%;
+    font-size: 20px;
+}

@@ -8,31 +8,31 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <title>Alla Romana</title>
 </head>
 <body>
     <section>
         <ul class="menu">
             <li><img src="imgs/ALLA_ROMANA__1_-removebg-preview.png" class="logo" alt=""></li>
-            <li><a href="">Cardápio</a></li>
-            <li><a href="">Monte o seu pedido</a></li>
+            <li><a href="perfil.html">Cardápio</a></li>
             <li><a href="">Pedidos</a></li>
             <li id="move"><img src="" alt=""><input type="search" placeholder="Buscar produto" class="transparente"></li>
             <li class="espacamento"></li>
-            <li><a href="">Carrinho</a></li>
+            <button class="carrinho" id="openCart">🛒<span id="itens">0</span></button>
             <li class="botao-entrar"><a href="login.html">Entrar</a></li>
         </ul>
         <span class="linha"></span>
     </section>
     <main class="container-main">
 
-        <div class="lado">
+        <div class="lado container-img">
         <h1 class="font-lado">Itália entregue na <br> sua porta.</h1>
         <div><img src="" alt=""></div>
         <p class="font-texto">Massa aberta de manhã, molho no fogo desde cedo e <br> tudo saindo quente da cozinha.</p>
     </div>
 
     <div class="img-main"><img src="imgs/366d358a-5ea7-4a79-bf94-345fd62c4c5f 1.png" alt=""></div>
+
 
     <div class="container-info">
         <div>
@@ -54,10 +54,48 @@
     </div>
 
     </div>
+
+    <div class="container-cardapio">
+        <h1 class="fonte-cardapio">Nosso Cardápio</h1>
+        <p class="font-prato">Os queridinhos da casa</p>
+    </div>
+
+    <section class="container-img-cardapio">
+            <div class="container-pizza"><img src="imgs/pizza-napolitana.jpg" id="pizza">
+                <h1 class="font-cardapio">Pizza Napoletana</h1>
+                <p class="font-detalhe">Massa de longa fermentação, tomate San Marzano.</p>
+                <p class="preco">R$ 49,90</p>
+                <button class="botao-cardapio">+</button>
+            </div>
+            <div class="container-macarrao"><img src="imgs/images (1).jpg" id="macarrao">
+                <h1 class="font-cardapio">Spaghetti alla Carbonara</h1>
+                <p class="font-detalhe">Cremosa, sem creme de leite, do jeito de Roma.</p>
+                <p class="preco">R$ 42,90</p>
+                <button class="botao-cardapio">+</button>
+            </div>
+            <div class="container-lasanha"><img src="imgs/immagine-evidenza-lasagne-alla-bolognese-1-960x640.jpg" id="lasanha">
+                <h1 class="font-cardapio">Lasanha Bolonhesa</h1>
+                <p class="font-detalhe">Camadas de massa fresca, ragù e bechamel gratinada.</p>
+                <p class="preco">R$ 46,50</p>
+                <button class="botao-cardapio">+</button>
+            </div>
+            <div class="container-sobremesa"><img src="imgs/Tiramisu_1200x800.jpg" id="sobremesa">
+                <h1 class="font-cardapio">Tiramisù</h1>
+                <p class="font-detalhe">Mascarpone, café e cacau. Receita da família.</p>
+                <p class="preco">R$ 25,00</p>
+                <button  class="botao-cardapio">+</button>
+            </div>
+    </section>
+
     </main>
 
     <footer class="container-copy">
-        
+        <div>
+            <p id="font-footer">
+                Feito com massa fresca e carinho · Alla Romana © 2026
+            </p>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
