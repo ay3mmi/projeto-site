@@ -299,3 +299,12 @@ p{
     margin-left:6px;
 }
 
+.carrinho-compras{
+    background-color: rgb(154, 167, 179);
+    width: 500px;
+    height: 800px;
+    display: flex;
+    margin-left: 73%;
+    margin-top: -28.2%;
+    opacity: 0;
+}
