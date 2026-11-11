@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alla Romana</title>
     <link rel="stylesheet" href="login.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
@@ -11,17 +11,22 @@
 <body>
    <section>
     <div>
-        <img src="imgs/ALLA_ROMANA-removebg-preview.png" class="img-logo">
+        <a href="index.html"><img src="imgs/ALLA_ROMANA-removebg-preview.png" class="img-logo" alt="Logo Alla Romana"></a>
     </div>
    </section>
 
    <main class="container-forms">
-    <form action="" class="login-forms">
-        <button class="botao-forms entrar" id="botao-entrar">Entrar</button>
-        <button class="botao-forms criar" id="botao-criar">Criar minha conta</button>
-        <input type="text" placeholder="Email" class="email">
-        <input type="text" placeholder="Senha" class="senha">
-        <button class="btn-entrar"> <a href="index.html">Entrar</a></button>
+    <form id="form-acesso" class="login-forms">
+        <div class="botoes-topo">
+            <button type="button" class="botao-forms entrar" id="botao-entrar">Entrar</button>
+            <button type="button" class="botao-forms criar active" id="botao-criar">Criar minha conta</button>
+        </div>
+
+        <input type="text" placeholder="Nome Completo" id="nome" required>
+        <input type="email" placeholder="Email" id="email" required>
+        <input type="password" placeholder="Senha" id="senha" required>
+        
+        <button class="btn-entrar" type="submit" id="btn-submit">Criar</button>
     </form>
    </main>
    
@@ -32,6 +37,6 @@
             </p>
         </div>
    </footer>
-   <script src="script.js"></script>
+   <script src="login.js"></script>
 </body>
 </html>

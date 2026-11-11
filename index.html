@@ -11,59 +11,78 @@
     <title>Alla Romana</title>
 </head>
 <body>
-    <section>
+   <section>
         <ul class="menu">
-            <li><img src="imgs/ALLA_ROMANA__1_-removebg-preview.png" class="logo" alt=""></li>
-            <li><a href="perfil.html">Cardápio</a></li>
-            <li><a href="">Pedidos</a></li>
+            <li><a href="index.html"><img src="imgs/ALLA_ROMANA__1_-removebg-preview.png" class="logo" alt=""></a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="perfil.html?aba=pedidos">Pedidos</a></li>
             <li id="move"><img src="" alt=""><input type="search" placeholder="Buscar produto" class="transparente"></li>
             <li class="espacamento"></li>
             <button class="carrinho" id="openCart">🛒<span id="itens">0</span></button>
-            <li class="botao-entrar"><a href="login.html">Entrar</a></li>
+            
+            <li class="area-usuario">
+                <!--aba que so aparece quando o usuario nao esta logado-->
+                <div class="botao-entrar" id="nav-btn-entrar">
+                    <a href="login.html">Entrar</a>
+                </div>
+
+                <!-- aba que aparece quando o usuario esta logado -->
+                <div class="perfil-dropdown-container oculto" id="nav-perfil-container">
+                    <button class="btn-foto-perfil" id="btn-abrir-menu" title="Menu da Conta">
+                        <img src="https://flaticon.com" alt="Foto de Perfil" id="nav-foto-img">
+                    </button>
+
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <div class="dropdown-header">
+                            <strong id="dropdown-nome">Nome do Usuário</strong>
+                        </div>
+                        <hr>
+                        <a href="perfil.html?aba=pedidos" class="dropdown-item"> Meus Pedidos</a>
+                        <a href="perfil.html?aba=conta" class="dropdown-item"> Minha Conta</a>
+                        <hr>
+                        <button type="button" class="dropdown-item sair" id="btn-sair-menu"> Sair</button>
+                    </div>
+                </div>
+            </li>
         </ul>
         <span class="linha"></span>
     </section>
+
     <main class="container-main">
-
         <div class="lado container-img">
-        <h1 class="font-lado">Itália entregue na <br> sua porta.</h1>
-        <div><img src="" alt=""></div>
-        <p class="font-texto">Massa aberta de manhã, molho no fogo desde cedo e <br> tudo saindo quente da cozinha.</p>
-    </div>
+            <h1 class="font-lado">Itália entregue na <br> sua porta.</h1>
+            <div><img src="" alt=""></div>
+            <p class="font-texto">Massa aberta de manhã, molho no fogo desde cedo e <br> tudo saindo quente da cozinha.</p>
+        </div>
 
-    <div class="img-main"><img src="imgs/366d358a-5ea7-4a79-bf94-345fd62c4c5f 1.png" alt=""></div>
+        <div class="img-main"><img src="imgs/366d358a-5ea7-4a79-bf94-345fd62c4c5f 1.png" alt=""></div>
 
-    <div class="carrinho-compras">
-        <div>a</div>
-    </div>
+        <div class="container-info">
+            <div>
+                <div><span class="linha-info"></span></div>
+                <h2 class="fonte">Massa feita hoje</h2>
+                <p class="fonte">Nada congelado, nada de ontem.</p>
+            </div>
 
-    <div class="container-info">
-        <div>
-            <div><span class="linha-info"></span></div>
-        <h2 class="fonte">Massa feita hoje</h2>
-        <p class="fonte">Nada congelado, nada de ontem.</p>
-    </div>
+            <div>
+                <div><span class="linha-info"></span></div>
+                <h2 class="fonte">Entrega em até 40 min</h2>
+                <p class="fonte">Na caixa térmica, sem esfriar.</p>
+            </div>
 
-    <div>
-        <div><span class="linha-info"></span></div>
-        <h2 class="fonte">Entrega em até 40 min</h2>
-        <p class="fonte">Na caixa térmica, sem esfriar.</p>
-    </div>
+            <div>
+                <div><span class="linha-info"></span></div>
+                <h2 class="fonte">Pague como preferir.</h2>
+                <p class="fonte">Pix, cartão ou na entrega.</p>
+            </div>
+        </div>
 
-    <div>
-        <div><span class="linha-info"></span></div>
-        <h2 class="fonte">Pague como preferir.</h2>
-        <p class="fonte">Pix, cartão ou na entrega.</p>
-    </div>
+        <div class="container-cardapio" id="cardapio">
+            <h1 class="fonte-cardapio">Nosso Cardápio</h1>
+            <p class="font-prato" id="mais-pedidos">Os queridinhos da casa</p>
+        </div>
 
-    </div>
-
-    <div class="container-cardapio">
-        <h1 class="fonte-cardapio">Nosso Cardápio</h1>
-        <p class="font-prato">Os queridinhos da casa</p>
-    </div>
-
-    <section class="container-img-cardapio">
+        <section class="container-img-cardapio">
             <div class="container-pizza"><img src="imgs/pizza-napolitana.jpg" id="pizza">
                 <h1 class="font-cardapio">Pizza Napoletana</h1>
                 <p class="font-detalhe">Massa de longa fermentação, tomate San Marzano.</p>
@@ -86,10 +105,9 @@
                 <h1 class="font-cardapio">Tiramisù</h1>
                 <p class="font-detalhe">Mascarpone, café e cacau. Receita da família.</p>
                 <p class="preco">R$ 25,00</p>
-                <button  class="botao-cardapio">+</button>
+                <button class="botao-cardapio">+</button>
             </div>
-    </section>
-
+        </section>
     </main>
 
     <footer class="container-copy">
@@ -99,6 +117,7 @@
             </p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

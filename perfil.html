@@ -3,31 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alla Romana</title>
     <link rel="stylesheet" href="perfil.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section>
+ <header>
+       <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alla Romana - Meu Perfil</title>
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header>
         <ul class="menu">
-            <li><img src="imgs/ALLA_ROMANA__1_-removebg-preview.png" class="logo" alt=""></li>
-            <li><a href="">Cardápio</a></li>
-            <li><a href="">Pedidos</a></li>
-            <li id="move"><img src="" alt=""><input type="search" placeholder="Buscar produto" class="transparente"></li>
-            <li class="espacamento"></li>
+            <li><a href="index.html"><img src="imgs/ALLA_ROMANA__1_-removebg-preview.png" class="logo" alt="Logo"></a></li>
+            <li><a href="index.html">Cardápio</a></li>
+            <li><a href="perfil.html?aba=pedidos">Pedidos</a></li>
+            <li id="move">
+                <input type="search" placeholder="Buscar produto" class="transparente">
+            </li>
             <button class="carrinho" id="openCart">🛒<span id="itens">0</span></button>
-            <li class="botao-entrar"><a href="login.html">Entrar</a></li>
+            <li class="area-usuario">
+                <a href="login.html" class="botao-entrar oculto" id="nav-btn-entrar">Entrar</a>
+
+                <div class="perfil-dropdown-container" id="nav-perfil-container">
+                    <button class="btn-foto-perfil" id="btn-abrir-menu" title="Menu da Conta">
+                        <img src="https://flaticon.com" alt="Foto de Perfil" id="nav-foto-img">
+                    </button>
+
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <div class="dropdown-header">
+                            <strong id="dropdown-nome">Nome do Usuário</strong>
+                        </div>
+                        <hr>
+                        <a href="perfil.html?aba=pedidos" class="dropdown-item" id="link-menu-pedidos"> Meus Pedidos</a>
+                        <a href="perfil.html?aba=conta" class="dropdown-item" id="link-menu-conta"> Minha Conta</a>
+                        <hr>
+                        <button class="dropdown-item sair" id="btn-sair-menu"> Sair</button>
+                    </div>
+                </div>
+            </li>
         </ul>
-        <span class="linha"></span>
-    </section>
+    </header>
 
     <main class="container-perfil">
-        <img src="" class="imagem-perfil">
-        <div>
-         <h1 class="nome">Sofia</h1>
-         <p class="email">Email:</p>
+        <div class="card-perfil">
+            <div class="avatar-placeholder">👤</div>
+            <div class="info-usuario">
+                <h1 class="nome" id="perfil-nome">Carregando...</h1>
+                <p class="email" id="perfil-email">Email: ...</p>
+            </div>
         </div>
+       
+        <div class="abas-navegacao">
+            <button class="btn-aba ativo" id="btn-aba-pedidos"> Meus Pedidos</button>
+            <button class="btn-aba" id="btn-aba-conta"> Minha Conta</button>
+        </div>
+
+        <!-- aba de pedidos -->
+        <section class="conteudo-aba" id="secao-pedidos">
+            <h2>Histórico de Pedidos</h2>
+            <div id="lista-pedidos" class="lista-pedidos">
+                
+            </div>
+        </section>
+
+        <!-- aba de conta do usuario(trocar nome ou senha) -->
+        <section class="conteudo-aba oculto" id="secao-conta">
+            <h2>Configurações da Conta</h2>
+            <form id="form-configuracoes" class="form-conta">
+                <div class="campo-form">
+                    <label for="novo-nome">Nome Completo:</label>
+                    <input type="text" id="novo-nome" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="nova-senha">Nova Senha (deixe em branco para manter a atual):</label>
+                    <input type="password" id="nova-senha" placeholder="Digite a nova senha">
+                </div>
+
+                <button type="submit" class="btn-salvar-config">Salvar Alterações</button>
+            </form>
+        </section>
     </main>
+
+    <footer class="container-copy">
+        <p id="font-footer">Feito com massa fresca e carinho · Alla Romana © 2026</p>
+    </footer>
+
+    <script src="perfil.js"></script>
 </body>
 </html>

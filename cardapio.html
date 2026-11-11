@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cardapio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alla Romana</title>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="index.html"><img src="imgs/ALLA_ROMANA__1_-removebg-preview.png" class="logo" alt="Alla Romana"></a></li>
+            <li><a href="cardapio.html" class="link-ativo">Cardápio</a></li>
+            <li><a href="perfil.html?aba=pedidos">Pedidos</a></li>
+            <li id="move">
+                <input type="search" id="campo-busca" placeholder="Buscar produto" class="transparente">
+            </li>
+            
+            <!-- Botão do Carrinho -->
+            <button type="button" class="carrinho" id="openCart">🛒<span id="itens">0</span></button>
+            
+            <!-- Área Dinâmica de Usuário -->
+            <li class="area-usuario">
+                <div class="botao-entrar" id="nav-btn-entrar">
+                    <a href="login.html">Entrar</a>
+                </div>
+
+                <div class="perfil-dropdown-container oculto" id="nav-perfil-container">
+                    <button type="button" class="btn-foto-perfil" id="btn-abrir-menu" title="Menu da Conta">
+                        <img src="https://flaticon.com" alt="Foto de Perfil">
+                    </button>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <div class="dropdown-header">
+                            <strong id="dropdown-nome">Nome do Usuário</strong>
+                        </div>
+                        <hr>
+                        <a href="perfil.html?aba=pedidos" class="dropdown-item">📦 Meus Pedidos</a>
+                        <a href="perfil.html?aba=conta" class="dropdown-item">⚙️ Minha Conta</a>
+                        <hr>
+                        <button type="button" class="dropdown-item sair" id="btn-sair-menu">🚪 Sair</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <!-- LAYOUT PRINCIPAL EM 3 COLUNAS -->
+    <main class="layout-cardapio">
+        
+        <!-- COLUNA 1: CATEGORIAS LATERAIS -->
+        <aside class="sidebar-categorias">
+            <p class="titulo-secao-menu">MENU PRINCIPAL</p>
+            <button type="button" class="btn-categoria ativo" data-categoria="todos">🍽️ Todos os Pratos</button>
+            <button type="button" class="btn-categoria" data-categoria="massas">🍝 Massas Frescas</button>
+            <button type="button" class="btn-categoria" data-categoria="pizzas">🍕 Pizzas Artesanais</button>
+            <button type="button" class="btn-categoria" data-categoria="classicos">🥩 Clássicos Italianos</button>
+            
+            <p class="titulo-secao-menu" style="margin-top: 25px;">DOCES</p>
+            <button type="button" class="btn-categoria" data-categoria="sobremesas">🍰 Sobremesas</button>
+        </aside>
+
+        <!-- COLUNA 2: GRADE DE PRATOS -->
+        <section class="area-pratos">
+            <div class="cabecalho-grade">
+                <h1 id="titulo-categoria">Nosso Cardápio Completo</h1>
+                <span id="contador-pratos">9 pratos disponíveis</span>
+            </div>
+
+            <div class="grade-cards" id="grade-cards">
+                
+                <!-- PRATO 1 -->
+                <div class="card-prato" data-categoria="massas" data-nome="Tagliatelle al Ragù (Bolonhesa)" data-preco="44.90" data-img="imgs/images (1).jpg" data-descricao="Massa fresca artesanal cortada em tiras longas, servida com autêntico ragù bolonhês cozido lentamente por 4 horas.">
+                    <div>
+                        <img src="imgs/Tagliatelle-con-ragu-a-la-bolognese-italiano-autentico.jpg" alt="Tagliatelle al Ragù">
+                        <h3>Tagliatelle al Ragù (Bolonhesa)</h3>
+                        <div class="card-estrelas">★★★★★</div>
+                    </div>
+                    <div>
+                        <p class="card-preco">R$ 44,90</p>
+                        <button type="button" class="btn-mais-card" title="Escolher quantidade">+</button>
+                    </div>
+                </div>
+
+                <!-- PRATO 2 -->
+                <div class="card-prato selecionado" data-categoria="pizzas" data-nome="Pizza Napoletana" data-preco="49.90" data-img="imgs/pizza-napolitana.jpg" data-descricao="Massa de longa fermentação natural, molho de tomate San Marzano, mozzarella di bufala e folhas de manjericão fresco.">
+                    <div>
+                        <img src="imgs/pizza-napolitana.jpg" alt="Pizza Napoletana">
+                        <h3>Pizza Napoletana</h3>
+                        <div class="card-estrelas">★★★★★</div>
+                    </div>
+                    <div>
+                        <p class="card-preco">R$ 49,90</p>
+                        <button type="button" class="btn-mais-card" title="Escolher quantidade">+</button>
+                    </div>
+                </div>
+
+                <!-- PRATO 3 -->
+                <div class="card-prato" data-categoria="massas" data-nome="Spaghetti alla Carbonara" data-preco="42.90" data-img="imgs/images (1).jpg" data-descricao="Cremosa, sem creme de leite, do jeito tradicional de Roma: gemas caipiras, queijo Pecorino Romano, guanciale crocante e pimenta-do-reino.">
+                    <div>
+                        <img src="imgs/images (1).jpg" alt="Spaghetti alla Carbonara">
+                        <h3>Spaghetti alla Carbonara</h3>
+                        <div class="card-estrelas">★★★★★</div>
+                    </div>
+                    <div>
+                        <p class="card-preco">R$ 42,90</p>
+                        <button type="button" class="btn-mais-card" title="Escolher quantidade">+</button>
+                    </div>
+                </div>
+
+                <!-- PRATO 4 -->
+                <div class="card-prato" data-categoria="massas" data-nome="Lasanha Bolonhesa" data-preco="46.50" data-img="imgs/immagine-evidenza-lasagne-alla-bolognese-1-960x640.jpg" data-descricao="Camadas finas de massa fresca intercaladas com ragù tradicional, molho bechamel aveludado e queijo gratinado no forno.">
+                    <div>
+                        <img src="imgs/immagine-evidenza-lasagne-alla-bolognese-1-960x640.jpg" alt="Lasanha Bolonhesa">
+                        <h3>Lasanha Bolonhesa</h3>
+                        <div class="card-estrelas">★★★★★</div>
+                    </div>
+                    <div>
+                        <p class="card-preco">R$ 46,50</p>
+                        <button type="button" class="btn-mais-card" title="Escolher quantidade">+</button>
+                    </div>
+                </div>
+
+                <!-- PRATO 5 -->
+                <div class="card-prato" data-categoria="sobremesas" data-nome="Tiramisù" data-preco="25.00" data-img="imgs/Tiramisu_1200x800.jpg" data-descricao="Sobremesa clássica italiana com biscoitos savoiardi embebidos em café espresso, creme leve de mascarpone e cacau em pó.">
+                    <div>
+                        <img src="imgs/Tiramisu_1200x800.jpg" alt="Tiramisù">
+                        <h3>Tiramisù</h3>
+                        <div class="card-estrelas">★★★★★</div>
+                    </div>
+                    <div>
+                        <p class="card-preco">R$ 25,00</p>
+                        <button type="button" class="btn-mais-card" title="Escolher quantidade">+</button>
+                    </div>
+                </div>
+
+                <!-- PRATO 6 -->
+                <div class="card-prato" data-categoria="classicos" data-nome="Parmigiana di Melanzane" data-preco="41.00" data-img="imgs/immagine-evidenza-lasagne-alla-bolognese-1-960x640.jpg" data-descricao="Fatias de berinjela empanadas e assadas em camadas com molho de tomate caseiro, manjericão e muito queijo derretido.">
+                    <div>
+                        <img src="imgs/parmigiana-di-melanzane.jpg" alt="Parmigiana di Melanzane">
+                        <h3>Parmigiana di Melanzane</h3>
+                        <div class="card-estrelas">★★★★★</div>
+                    </div>
+                    <div>
+                        <p class="card-preco">R$ 41,00</p>
+                        <button type="button" class="btn-mais-card" title="Escolher quantidade">+</button>
+                    </div>
+                </div>
+
+                <!-- PRATO 7 -->
+                <div class="card-prato" data-categoria="classicos" data-nome="Ossobuco" data-preco="64.90" data-img="imgs/366d358a-5ea7-4a79-bf94-345fd62c4c5f 1.png" data-descricao="Corte nobre bovino braseado lentamente no vinho branco e ervas aromáticas até desmanchar, acompanhado de risoto milanês.">
+                    <div>
+                        <img src="imgs/images.jpg" alt="Ossobuco">
+                        <h3>Ossobuco</h3>
+                        <div class="card-estrelas">★★★★★</div>
+                    </div>
+                    <div>
+                        <p class="card-preco">R$ 64,90</p>
+                        <button type="button" class="btn-mais-card" title="Escolher quantidade">+</button>
+                    </div>
+                </div>
+
+                <!-- PRATO 8 -->
+                <div class="card-prato" data-categoria="sobremesas" data-nome="Panna Cotta" data-preco="22.50" data-img="imgs/Tiramisu_1200x800.jpg" data-descricao="Creme cozido delicado aromatizado com fava de baunilha natural, finalizado com calda artesanal de frutas vermelhas.">
+            <div>
+            <img src="imgs/panna-cotta-gourmet-com-molho-de-framboesa-780x520.jpg" alt="Panna Cotta">
+        <h3>Panna Cotta</h3>
+        <div class="card-estrelas">★★★★★</div>
+    </div>
+    <div>
+        <p class="card-preco">R$ 22,50</p>
+        <button type="button" class="btn-mais-card" title="Escolher quantidade">+</button>
+    </div>
+</div>
+
+        <div class="card-prato" data-categoria="sobremesas" data-nome="Sfogliatella" data-preco="18.90" data-img="imgs/Tiramisu_1200x800.jpg" data-descricao="Doce folhado crocante tradicional de Nápoles em formato de concha, recheado com creme de ricota e raspas de laranja cristalizada.">
+    <div>
+        <img src="imgs/images (2).jpg" alt="Sfogliatella">
+        <h3>Sfogliatella</h3>
+        <div class="card-estrelas">★★★★★</div>
+    </div>
+    <div>
+        <p class="card-preco">R$ 18,90</p>
+        <button type="button" class="btn-mais-card" title="Escolher quantidade">+</button>
+    </div>
+</div>
+              <div class="overlay-carrinho oculto" id="overlay-carrinho"></div>
+    <aside class="gaveta-carrinho" id="gaveta-carrinho">
+        <div class="carrinho-topo">
+            <h2>🛒 Seu Carrinho</h2>
+            <button type="button" id="fechar-carrinho" class="btn-fechar-carrinho">&times;</button>
+        </div>
+
+        <!-- AQUI É ONDE OS PRATOS ADICIONADOS VÃO APARECER -->
+        <div class="carrinho-lista" id="carrinho-lista"></div>
+
+        <div class="carrinho-rodape">
+            <div class="linha-total">
+                <span>Total a pagar:</span>
+                <strong id="carrinho-total" class="preco-total-verde">R$ 0,00</strong>
+            </div>
+            <button type="button" id="btn-confirmar-pedido" class="btn-confirmar-pedido">
+                Confirmar Pedido
+            </button>
+        </div>
+    </aside>
+
+        <script src="cardapio.js"></script>
+        
+</body>
+</html>
