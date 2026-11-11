@@ -9,7 +9,6 @@ const inputSenha = document.getElementById('senha');
 
 let modoCadastro = true;
 
-// alterna para a aba de entrar
 btnEntrarTab.addEventListener('click', () => {
     modoCadastro = false;
     inputNome.style.display = 'none';
@@ -17,7 +16,6 @@ btnEntrarTab.addEventListener('click', () => {
     btnSubmit.textContent = 'Entrar';
 });
 
-// alterna para a aba de criar conta
 btnCriarTab.addEventListener('click', () => {
     modoCadastro = true;
     inputNome.style.display = 'block';

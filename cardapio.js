@@ -60,7 +60,7 @@ if (campoBuscaCardapio) {
     });
 }
 
-// verificação do cardapio
+// verificação do cardapio pra ver se ta tudo certo na busca
 const parametrosUrl = new URLSearchParams(window.location.search);
 const termoVindoDeOutraPagina = parametrosUrl.get('busca');
 
