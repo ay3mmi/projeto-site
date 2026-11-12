@@ -299,19 +299,61 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 9. Ação do botão Confirmar Pedido
-    if (btnConfirmar) {
-        btnConfirmar.addEventListener("click", () => {
-            if (carrinho.length === 0) {
-                alert("Adicione algum item ao carrinho antes de confirmar o pedido.");
-                return;
-            }
-            alert("Pedido confirmado com sucesso! Em breve começaremos o preparo.");
-            carrinho = [];
-            atualizarCarrinho();
-            fecharDropLateral();
-        });
-    }
+   // 9. Ação do botão Confirmar Pedido
+if (btnConfirmar) {
+    btnConfirmar.addEventListener("click", () => {
+        if (carrinho.length === 0) {
+            alert("Adicione algum item ao carrinho antes de confirmar o pedido.");
+            return;
+        }
+
+        // Verifica se o usuário está logado antes de fechar o pedido
+        const estaLogado = localStorage.getItem('usuarioLogado') === 'true';
+        if (!estaLogado) {
+            alert("Por favor, faça login para confirmar o seu pedido.");
+            window.location.href = 'login.html';
+            return;
+        }
+
+        // Cria um resumo legível dos itens
+        const resumoItens = carrinho.map(item => `${item.quantidade}x ${item.nome}`).join(', ');
+
+        // Calcula o valor total do pedido
+        const valorTotal = carrinho.reduce((total, item) => total + (item.preco * item.quantidade), 0);
+
+        // Gera a data e horário atual formatados
+        const agora = new Date();
+        const dataFormatada = agora.toLocaleDateString('pt-BR') + ' às ' + agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+
+        // Cria o objeto do novo pedido no formato esperado pelo perfil.js
+        const novoPedido = {
+            id: Math.floor(1000 + Math.random() * 9000), // ID aleatório de 4 dígitos
+            itens: resumoItens,
+            data: dataFormatada,
+            total: valorTotal.toFixed(2).replace('.', ','),
+            status: "Em preparo"
+        };
+
+        // Recupera os pedidos salvos anteriormente no navegador ou inicia um array vazio
+        let pedidosSalvos = JSON.parse(localStorage.getItem('usuarioPedidos')) || [];
+        
+        // Adiciona o novo pedido no início da lista para aparecer primeiro
+        pedidosSalvos.unshift(novoPedido);
+
+        // Salva atualizado no localStorage
+        localStorage.setItem('usuarioPedidos', JSON.stringify(pedidosSalvos));
+
+        alert("Pedido confirmado com sucesso! O acompanhamento já está disponível na aba 'Pedidos' do seu perfil.");
+
+        // Limpa o carrinho atual e fecha a gaveta
+        carrinho = [];
+        atualizarCarrinho();
+        fecharDropLateral();
+
+        // Opcional: Redireciona automaticamente o usuário para a página de pedidos
+        window.location.href = 'perfil.html?aba=pedidos';
+    });
+}
 
     // Carrega os itens salvos assim que a página abre
     atualizarCarrinho();
