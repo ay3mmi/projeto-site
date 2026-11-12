@@ -355,7 +355,7 @@ a { text-decoration: none; color: inherit; }
 
 .texto-descricao {
     font-size: 15px;
-    color: #666;
+    color: var(--texto-escuro);
     line-height: 1.5;
     margin-bottom: 16px;
 }
@@ -512,7 +512,7 @@ a { text-decoration: none; color: inherit; }
 
 .item-carrinho-info p { 
     font-size: 14px; 
-    color: #666; 
+    color: #1E1E1E; 
     margin-top: 3px; 
 }
 
